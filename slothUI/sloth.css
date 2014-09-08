@@ -72,6 +72,7 @@ body {
 	display:-ms-box;
 	display:-o-box;
 	display:box;
+	position: relative;
 	font: 16px/1.25 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -103,7 +104,8 @@ img {
 }
 
 /* section默认 */
-body > section {
+body > section,
+body > aside {
 	display:-webkit-box;
 	display:-moz-box;
 	display:-ms-box;
@@ -118,6 +120,13 @@ body > section {
 	webkit-transform:translate3d(0,0,0);
 	width: inherit;
 	z-index: -1;
+	position: absolute;
+	left: 0px;
+}
+
+/* main section */
+body > section[data-role="main"] {
+	z-index: 1;
 }
 
 /* header默认 */
